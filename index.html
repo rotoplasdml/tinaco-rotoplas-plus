@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Keywords -->
+		<meta name="keywords" content="Tinaco, Rotoplas, Plus"/>
+		<!-- Icon -->
+		<link rel="icon" href="resources/favicon.ico">
+		<!-- Description -->
+		<meta name="description" content="Tinaco Rotoplas Plus">
+		<!-- Title -->
+		<title>Tinaco Rotoplas Plus</title>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="css/styles.css">
+		<!-- Js -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<!-- THREEJS -->
+		<script src="js/three.js"></script>
+		<script src="js/OrbitControls.js"></script>
+		<script src="js/GLTFLoader.js"></script>
+		<script src="js/Detector.js"></script>
+		<script src="js/stats.min.js"></script>
+	</head>
+	<body>
+		<!-- Navegacion -->
+		<nav id="navegacion" class="navbar navbar-expand-lg fixed-top">
+			<a id="navegacion-logo" href="/" class="navbar-brand logo-oculto d-none d-md-block">
+				<img src="resources/rotoplas_logo_color_blanco.svg" width="150" alt="Logotipo Rotoplas" title="Rotoplas">
+			</a>
+			<button 
+				id="navegacion-toggler"
+				class="navbar-toggler custom-toggler" 
+				type="button" 
+				data-bs-toggle="collapse" 
+				data-bs-target="#toggleMobileMenu" 
+				aria-controls="toggleMobileMenu" 
+				aria-expanded="false" 
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<a id="navegacion-logo-movil" href="/" class="navbar-brand logo-oculto d-block d-md-none">
+				<img src="resources/rotoplas_logo_color_blanco.svg" width="150" alt="Logotipo Rotoplas" title="Rotoplas">
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end text-center" id="toggleMobileMenu">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
+					<li class="nav-item"><a class="nav-link" href="#capacidades">Capacidades</a></li>
+					<li class="nav-item"><a class="nav-link" href="#accesorios">Accesorios</a></li>
+					<li class="nav-item"><a class="nav-link" href="#instalacion">Instalación</a></li>
+					<li class="nav-item"><a class="nav-link" href="#cotiza">Cotiza</a></li>
+				</ul>
+			</div>
+			
+		</nav>
+
+		<div class="container-fluid">
+			<!-- Banner Desktop -->
+			<div id="banner" class="row position-relative">
+				<div class="col p-0">
+					<img id="banner-fondo-escritorio" class="w-100" src="resources/inicio-fondo-escritorio.jpg" alt="Fondo" title="Tinaco Rotoplas Plus+">
+					<img id="banner-fondo-movil" class="w-100" src="resources/inicio-fondo-movil.jpg" alt="Fondo" title="Tinaco Rotoplas Plus+">
+					<div id="banner-texto">
+						<h1 class="blue5">Tinaco <span class="bold">Plus+</span></h1>
+						<h2 class="bold blue5">La evolución del tinaco<br><span class="blue2">más querido de México</span></h2>
+					</div>
+					<div id="banner-logo">
+						<img src="resources/rotoplas_logo_color.svg" alt="Logotipo" title="Rotoplas">
+					</div>
+					<div id="banner-nuevo">
+						<p class="bold blue5">Nuevo</p>
+					</div>
+					<div id="banner-frase">
+						<p class="text-white text-end">Ponle un<br><span class="bold text-end">plus a tu vida</span></p>
+					</div>
+					<div id="banner-boton" class="hvr-float">
+						<a href="#"><img style="width: 50px;" src="resources/boton-scroll.svg" alt="boton" title="Scroll"></a>
+					</div>
+				</div>
+			</div>
+			<!-- Evolucion -->
+			<div class="row flex-column-reverse | flex-sm-row align-items-center" id="evolucion">
+				<div class="col-12 px-0 py-3 pe-3 position-relative | col-md-6">
+					<img class="w-100" src="resources/evoluciona-01.jpg" alt="Fondo" title="Evoluciona tu tinaco">
+					<div id="evolucion-boton">
+						<a class="hvr-float text-decoration-none text-center" data-bs-toggle="modal" data-bs-target="#ventana-3d" href="#">
+							<img width="100px" src="resources/evolucion-boton.svg" alt="boton" title="Evolucion">
+							<br><span class="bold blue5">Ver en 3D</span>
+						</a>
+					</div>
+				</div>
+				<div class="col-12 p-3 | col-md-6 | col-lg-4 offset-lg-1">
+					<h2 class="light blue5">Evoluciona tu tinaco con la<br><span class="bold">última tecnología en México</span></h2>
+					<p>Cámbiate al nuevo <span class="bold blue5">Tinaco Plus+</span>, con mayores beneficios para ti y tu familia manteniento el agua con la mejor calidad. Con un innovador y único diseño.</p>
+					<a class="rtp-btn hvr-forward" href="#">¡Cotiza el tuyo!</a>
+				</div>
+			</div>
+			<!-- Beneficios Desktop -->
+			<div class="row" id="beneficios">
+				<div class="col-12 text-center mt-3 pt-3 | mb-md-3 pb-md-3">
+					<h2 class="light text-white">Tinaco Plus+<br><span class="bold">con mayores beneficios para ti y tu familia</span></h2>
+				</div>
+				<!-- izq -->
+				<div class="col-12 d-none | d-lg-block | order-1 | col-md-4">
+					<div class="beneficios-nodo" id="beneficios-nodo-1">
+						<div class="beneficios-nodo-imagen"><img src="resources/beneficios-01.svg" alt="Icono beneficios 1" title="Beneficios 1"></div>
+						<div class="beneficios-nodo-texto"><p><span class="bold">Nueva Tapa Plus+</span> Roscada evita la entrada de contaminantes</p></div>
+					</div>
+					<div class="beneficios-nodo" id="beneficios-nodo-2">
+						<div class="beneficios-nodo-imagen"><img src="resources/beneficios-02.svg" alt="Icono beneficios 2" title="Beneficios 2"></div>
+						<div class="beneficios-nodo-texto"><p><span class="bold">Soportes verticales</span> para mayor estabilidad y resistencia</p></div>
+					</div>
+					<div class="beneficios-nodo" id="beneficios-nodo-3">
+						<div class="beneficios-nodo-imagen"><img src="resources/beneficios-03.svg" alt="Icono beneficios 3" title="Beneficios 3"></div>
+						<div class="beneficios-nodo-texto"><p><span class="bold">Orejas de izaje</span> para un mejor manejo durante la instalación</p></div>
+					</div>
+					<div class="beneficios-nodo" id="beneficios-nodo-4">
+						<div class="beneficios-nodo-imagen"><img src="resources/beneficios-04.svg" alt="Icono beneficios 4" title="Beneficios 4"></div>
+						<div class="beneficios-nodo-texto"><p>Fabricados bajo una <span class="bold">nueva tecnología</span> que los hace más resistentes y durables</p></div>
+					</div>
+				</div>
+				<!-- centro -->
+				<div class="col-12 d-none position-relative | d-lg-flex align-items-center | order-3 | col-md-4 order-md-2">
+					<!-- <img class="w-100" src="resources/beneficios-centro-01.png" alt="Imagen Beneficios 1" title="Beneficios 1"> -->
+					<div id="beneficios-nodo-principal-1" class="beneficios-nodo-principal position-absolute"><img src="resources/beneficios-centro-01.jpg" alt="Icono beneficios 1" title="Beneficios 1"></div>
+					<div id="beneficios-nodo-principal-2" class="beneficios-nodo-principal position-absolute"><img src="resources/beneficios-centro-02.jpg" alt="Icono beneficios 2" title="Beneficios 2"></div>
+					<div id="beneficios-nodo-principal-3" class="beneficios-nodo-principal position-absolute"><img src="resources/beneficios-centro-03.jpg" alt="Icono beneficios 3" title="Beneficios 3"></div>
+					<div id="beneficios-nodo-principal-4" class="beneficios-nodo-principal position-absolute"><img src="resources/beneficios-centro-04.jpg" alt="Icono beneficios 4" title="Beneficios 4"></div>
+					<div id="beneficios-nodo-principal-5" class="beneficios-nodo-principal position-absolute"><img src="resources/beneficios-centro-05.jpg" alt="Icono beneficios 5" title="Beneficios 5"></div>
+					<div id="beneficios-nodo-principal-6" class="beneficios-nodo-principal position-absolute"><img src="resources/beneficios-centro-06.jpg" alt="Icono beneficios 6" title="Beneficios 6"></div>
+					<div id="beneficios-nodo-principal-7" class="beneficios-nodo-principal position-absolute"><img src="resources/beneficios-centro-07.jpg" alt="Icono beneficios 7" title="Beneficios 7"></div>
+					<div id="beneficios-nodo-principal-8" class="beneficios-nodo-principal position-absolute"><img src="resources/beneficios-centro-08.jpg" alt="Icono beneficios 8" title="Beneficios 8"></div>
+				</div>
+				<!-- der -->
+				<div class="col-12 d-none | d-lg-block | order-2 | col-md-4">
+					<div class="beneficios-nodo" id="beneficios-nodo-5">
+						<div class="beneficios-nodo-texto"><p><span class="bold">4 entradas</span> de agua de acuerdo a tu instalación</p></div>
+						<div class="beneficios-nodo-imagen"><img src="resources/beneficios-05.svg" alt="Icono beneficios 5" title="Beneficios 5"></div>
+					</div>
+					<div class="beneficios-nodo" id="beneficios-nodo-6">
+						<div class="beneficios-nodo-texto"><p>Máxima calidad <span class="bold">de por vida</span></p></div>
+						<div class="beneficios-nodo-imagen"><img src="resources/beneficios-06.svg" alt="Icono beneficios 6" title="Beneficios 6"></div>
+					</div>
+					<div class="beneficios-nodo" id="beneficios-nodo-7">
+						<div class="beneficios-nodo-texto"><p><span class="bold">Capa antibacterial</span> con tecnología <span class="bold">Expel</span> que inhibe la reproducción de bacterias</p></div>
+						<div class="beneficios-nodo-imagen"><img src="resources/beneficios-07.svg" alt="Icono beneficios 7" title="Beneficios 7"></div>
+					</div>
+					<div class="beneficios-nodo" id="beneficios-nodo-8">
+						<div class="beneficios-nodo-texto"><p>Incorporan atributos que facilitan su<span class="bold">traslado, instalacion y manteniento</span></p></div>
+						<div class="beneficios-nodo-imagen"><img src="resources/beneficios-08.svg" alt="Icono beneficios 8" title="Beneficios 8"></div>
+					</div>
+				</div>
+				<!-- Beneficios movil -->
+				<div id="beneficios-slider" class="col-10 offset-1 p-0 | col-sm-8 offset-sm-2 | col-md-6 offset-md-3 | d-lg-none">
+					<div class="beneficios-nodo" id="beneficios-nodo-1">
+						<div class="beneficios-nodo-principal"><img src="resources/beneficios-centro-01.jpg" alt="Icono beneficios 1" title="Beneficios 1"></div>
+						<div class="beneficios-nodo-imagen"><img src="resources/beneficios-01.svg" alt="Icono beneficios 1" title="Beneficios 1"></div>
+						<div class="beneficios-nodo-texto"><p><span class="bold">Nueva Tapa Plus+</span> Roscada evita la entrada de contaminantes</p></div>
+					</div>
+					<div class="beneficios-nodo" id="beneficios-nodo-2">
+						<div class="beneficios-nodo-principal"><img src="resources/beneficios-centro-02.jpg" alt="Icono beneficios 1" title="Beneficios 1"></div>
+						<div class="beneficios-nodo-imagen"><img src="resources/beneficios-02.svg" alt="Icono beneficios 2" title="Beneficios 2"></div>
+						<div class="beneficios-nodo-texto"><p><span class="bold">Soportes verticales</span> para mayor estabilidad y resistencia</p></div>
+					</div>
+					<div class="beneficios-nodo" id="beneficios-nodo-3">
+						<div class="beneficios-nodo-principal"><img src="resources/beneficios-centro-03.jpg" alt="Icono beneficios 1" title="Beneficios 1"></div>
+						<div class="beneficios-nodo-imagen"><img src="resources/beneficios-03.svg" alt="Icono beneficios 3" title="Beneficios 3"></div>
+						<div class="beneficios-nodo-texto"><p><span class="bold">Orejas de izaje</span> para un mejor manejo durante la instalación</p></div>
+					</div>
+					<div class="beneficios-nodo" id="beneficios-nodo-4">
+						<div class="beneficios-nodo-principal"><img src="resources/beneficios-centro-04.jpg" alt="Icono beneficios 1" title="Beneficios 1"></div>
+						<div class="beneficios-nodo-imagen"><img src="resources/beneficios-04.svg" alt="Icono beneficios 4" title="Beneficios 4"></div>
+						<div class="beneficios-nodo-texto"><p>Fabricados bajo una <span class="bold">nueva tecnología</span> que los hace más resistentes y durables</p></div>
+					</div>
+					<div class="beneficios-nodo" id="beneficios-nodo-5">
+						<div class="beneficios-nodo-principal"><img src="resources/beneficios-centro-05.jpg" alt="Icono beneficios 1" title="Beneficios 1"></div>
+						<div class="beneficios-nodo-imagen"><img src="resources/beneficios-05.svg" alt="Icono beneficios 5" title="Beneficios 5"></div>
+						<div class="beneficios-nodo-texto"><p><span class="bold">4 entradas</span> de agua de acuerdo a tu instalación</p></div>
+					</div>
+					<div class="beneficios-nodo" id="beneficios-nodo-6">
+						<div class="beneficios-nodo-principal"><img src="resources/beneficios-centro-06.jpg" alt="Icono beneficios 1" title="Beneficios 1"></div>
+						<div class="beneficios-nodo-imagen"><img src="resources/beneficios-06.svg" alt="Icono beneficios 6" title="Beneficios 6"></div>
+						<div class="beneficios-nodo-texto"><p>Máxima calidad <span class="bold">de por vida</span></p></div>
+					</div>
+					<div class="beneficios-nodo" id="beneficios-nodo-7">
+						<div class="beneficios-nodo-principal"><img src="resources/beneficios-centro-07.jpg" alt="Icono beneficios 1" title="Beneficios 1"></div>
+						<div class="beneficios-nodo-imagen"><img src="resources/beneficios-07.svg" alt="Icono beneficios 7" title="Beneficios 7"></div>
+						<div class="beneficios-nodo-texto"><p><span class="bold">Capa antibacterial</span> con tecnología <span class="bold">Expel</span> que inhibe la reproducción de bacterias</p></div>
+					</div>
+					<div class="beneficios-nodo" id="beneficios-nodo-8">
+						<div class="beneficios-nodo-principal"><img src="resources/beneficios-centro-08.jpg" alt="Icono beneficios 1" title="Beneficios 1"></div>
+						<div class="beneficios-nodo-imagen"><img src="resources/beneficios-08.svg" alt="Icono beneficios 8" title="Beneficios 8"></div>
+						<div class="beneficios-nodo-texto"><p>Incorporan atributos que facilitan su<span class="bold">traslado, instalacion y manteniento</span></p></div>
+					</div>
+				</div>
+			</div>
+			<!-- Capacidades -->
+			<div class="row" id="capacidades">
+				<div class="col-12 text-center mb-3 pb-3">
+					<h2 class="light blue5">Tantas capacidades que siempre encontrarás una<br><span class="bold">¡hecha especialmente a tu medida!</span></h2>
+				</div>
+				<div class="col-12 d-flex flex-wrap justify-content-evenly">
+					<div class="capacidades-nodo text-center">
+						<img class="capacidades-nodo-imagen" src="resources/capacidades-01.png" alt="Capaidad 450" title="Capacidad 450 L">
+						<p class="blue5">450 L</p>
+						<img class="capacidades-nodo-usuarios" width="30" src="resources/icono-persona-01.svg" alt="Icono persona">
+					</div>
+					<div class="capacidades-nodo text-center">
+						<img class="capacidades-nodo-imagen" src="resources/capacidades-02.png" alt="Capaidad 800" title="Capacidad 800 L">
+						<p class="blue5">800 L</p>
+						<img class="capacidades-nodo-usuarios" width="30" src="resources/icono-persona-01.svg" alt="Icono persona">
+						<img class="capacidades-nodo-usuarios" width="30" src="resources/icono-persona-01.svg" alt="Icono persona">
+					</div>
+					<div class="capacidades-nodo text-center">
+						<img  class="capacidades-nodo-imagen" src="resources/capacidades-03.png" alt="Capaidad 1,100" title="Capacidad 1,100 L">
+						<p class="blue5">1,100 L</p>
+						<img class="capacidades-nodo-usuarios" width="30" src="resources/icono-persona-01.svg" alt="Icono persona">
+						<img class="capacidades-nodo-usuarios" width="30" src="resources/icono-persona-01.svg" alt="Icono persona">
+						<img class="capacidades-nodo-usuarios" width="30" src="resources/icono-persona-01.svg" alt="Icono persona">
+					</div>
+					<div class="capacidades-nodo text-center">
+						<img  class="capacidades-nodo-imagen" src="resources/capacidades-04.png" alt="Capaidad 2,000" title="Capacidad 2,000 L">
+						<p class="blue5">2,000 L</p>
+						<img class="capacidades-nodo-usuarios" width="30" src="resources/icono-persona-01.svg" alt="Icono persona">
+						<img class="capacidades-nodo-usuarios" width="30" src="resources/icono-persona-01.svg" alt="Icono persona">
+						<img class="capacidades-nodo-usuarios" width="30" src="resources/icono-persona-01.svg" alt="Icono persona">
+						<img class="capacidades-nodo-usuarios" width="30" src="resources/icono-persona-01.svg" alt="Icono persona">
+						<img class="capacidades-nodo-usuarios" width="30" src="resources/icono-persona-01.svg" alt="Icono persona">
+					</div>
+					<div class="capacidades-nodo text-center">
+						<img  class="capacidades-nodo-imagen" src="resources/capacidades-05.png" alt="Capaidad 2,500" title="Capacidad 2,500 L">
+						<p class="blue5">2,500 L</p>
+						<img class="capacidades-nodo-usuarios" width="30" src="resources/icono-persona-01.svg" alt="Icono persona">
+						<img class="capacidades-nodo-usuarios" width="30" src="resources/icono-persona-01.svg" alt="Icono persona">
+						<img class="capacidades-nodo-usuarios" width="30" src="resources/icono-persona-01.svg" alt="Icono persona">
+						<img class="capacidades-nodo-usuarios" width="30" src="resources/icono-persona-01.svg" alt="Icono persona">
+						<img class="capacidades-nodo-usuarios" width="30" src="resources/icono-persona-01.svg" alt="Icono persona">
+						<img class="capacidades-nodo-usuarios" width="30" src="resources/icono-persona-01.svg" alt="Icono persona">
+					</div>
+				</div>
+				<div class="col-12 text-center my-3 py-3">
+					<a class="rtp-btn mt-3 hvr-float" href="#">¡Consigue hoy el tuyo!</a>
+				</div>
+			</div>
+			<!-- Accesorios -->
+			<div class="row align-items-end" id="accesorios">
+				<div class="col-12 order-1 text-center mb-3 pb-3">
+					<h2 class="light blue5">Equipado siempre con<br><span class="bold">los mejores accesorios</span></h2>
+				</div>
+				<div class="col-12 order-3 | order-md-2 col-md-4 offset-md-1 p-0 px-3">
+					<img class="w-100" src="resources/caracteristicas-01.jpg" alt="Imagen" title="Accesorios">
+				</div>
+				<div class="col-12 order-2 p-3 justify-content-center | order-md-3 col-md-5 offset-md-1 d-flex">
+					<div id="accesorios-imagenes-1">
+						<img src="resources/accesorios-01.jpg" alt="Imagen Accesorio 1" title="Accesorio 1">
+						<img src="resources/accesorios-02.jpg" alt="Imagen Accesorio 2" title="Accesorio 2">
+						<img src="resources/accesorios-02.jpg" alt="Imagen Accesorio 3" title="Accesorio 3">
+						<img src="resources/accesorios-04.jpg" alt="Imagen Accesorio 4" title="Accesorio 4">
+					</div>
+					<div id="accesorios-imagenes-2">
+						<img src="resources/accesorios-05.jpg" alt="Imagen Accesorio 5" title="Accesorio 5">
+					</div>
+				</div>
+				<div class="col-12 order-4 text-start | text-md-center" id="accesorios-nodos">
+					<div class="accesorios-nodo d-block | d-sm-inline-block">
+						<div class="text-center accesorios-nodo-numero">1</div> Multiconector
+					</div>
+					<div class="accesorios-nodo d-block | d-sm-inline-block">
+						<div class="text-center accesorios-nodo-numero">2</div> Válvula de llenado 3/4"
+					</div>
+					<div class="accesorios-nodo d-block | d-sm-inline-block">
+						<div class="text-center accesorios-nodo-numero">3</div> Filtro Estándar
+					</div>
+					<div class="accesorios-nodo d-block | d-sm-inline-block">
+						<div class="text-center accesorios-nodo-numero">4</div> Flotador No. 5
+					</div>
+					<div class="accesorios-nodo d-block | d-sm-inline-block">
+						<div class="text-center accesorios-nodo-numero">5</div> Jarro de aire
+					</div>
+				</div>
+			</div>
+			<!-- Instalacion -->
+			<div class="row" id="instalacion">
+				<div class="col-12 p-3 | col-md-6 | col-lg-4 offset-lg-1">
+					<h2 class="light blue5 mb-3">Los pasos más sencillos<br><span class="bold">para su instalación</span></h2>
+					<p class="mt-3">El nuevo <span class="bold blue5">Tinaco Rotoplas Plus+</span>, cuenta con los elementos necesarios e innovadores para instalarlo más facilmente.</p>
+					<div class="text-center mt-3 pt-3">
+						<a class="rtp-btn-outline hvr-float" href="#">Descarga el manual&nbsp;&nbsp;<img width="20" src="resources/icono-descarga.svg" alt="Icono Descarga"></a>
+						<a class="rtp-btn-outline hvr-float mt-3 | mt-xxl-0" href="#">Descarga la ficha&nbsp;&nbsp;<img width="20" src="resources/icono-descarga.svg" alt="Icono Descarga"></a>
+					</div>
+				</div>
+				<div class="col-12 | col-md-6 | col-lg-6">
+					<video poster="" class="w-100" width="400" controls>
+						<source src="mov_bbb.mp4" type="video/mp4">
+						Your browser does not support HTML video.
+					</video>
+				</div>
+				<div class="col-12 d-flex flex-row flex-wrap justify-content-center">
+					<div class="instalacion-nodo">
+						<img src="resources/instalacion-01.jpg" alt="Imagen Instalacion 01" title="Instalación 01">
+						<p><span class="bold blue5">1.</span> Sube tu Tanque Dual y sus accesorios a la azotea del inmueble</p>
+					</div>
+					<div class="instalacion-nodo">
+						<img src="resources/instalacion-02.jpg" alt="Imagen Instalacion 02" title="Instalación 02">
+						<p><span class="bold blue5">2.</span> Instala la Válvula de 1/2" y Flotador</p>
+					</div>
+					<div class="instalacion-nodo">
+						<img src="resources/instalacion-03.jpg" alt="Imagen Instalacion 03" title="Instalación 03">
+						<p><span class="bold blue5">3.</span> Conecta la tubería de alimentación a tu Tinaco Rotoplas Plus+</p>
+					</div>
+					<div class="instalacion-nodo">
+						<img src="resources/instalacion-04.jpg" alt="Imagen Instalacion 04" title="Instalación 04">
+						<p><span class="bold blue5">4.</span> Instala el Multiconector y el jarro de aire</p>
+					</div>
+					<div class="instalacion-nodo">
+						<img src="resources/instalacion-05.jpg" alt="Imagen Instalacion 05" title="Instalación 05">
+						<p><span class="bold blue5">5.</span> Conecta la tubería de salide agua</p>
+					</div>
+					<div class="instalacion-nodo">
+						<img src="resources/instalacion-06.jpg" alt="Imagen Instalacion 06" title="Instalación 06">
+						<p><span class="bold blue5">6.</span> Por último, instala el Filtro de sedimentos Estándar seguido del medidor o de la bomba de agua</p>
+					</div>
+					<div class="instalacion-nodo">
+						<img src="resources/instalacion-07.jpg" alt="Imagen Instalacion 07" title="Instalación 07">
+						<p><span class="bold blue5">7.</span> ¡Listo! ahora tienes instalado tu Tinaco Rotoplas Plus+</p>
+					</div>
+				</div>
+			</div>
+			<!-- Cotiza -->
+			<div class="row align-items-center | flex-md-row" id="cotiza">
+				<div class="col-12 p-3 | col-md-6 | col-lg-4 offset-lg-1">
+					<h2 class="light blue5">Adquiere el día de hoy tu<br><span class="bold">Tinaco Rotoplas Plus+</span></h2>
+					<p>Déjanos tus datos y en breve un ejecutivo de Rotoplas se comunicará contigo.</p>
+
+					<form class="row g-3">
+						<div class="col-12">
+							<input type="text" class="form-control" name="nombre" placeholder="Nombre *">
+						</div>
+						<div class="col-12">
+							<input type="email" class="form-control" name="correo" placeholder="Correo electrónico">
+						</div>
+						<div class="col-12">
+							<input type="text" class="form-control" name="telefono" placeholder="Teléfono *">
+						</div>
+						<div class="col-12">
+							<input type="text" class="form-control" name="estado" placeholder="Estado *">
+						</div>
+						<div class="col-12">
+							<button type="submit" class="btn btn-primary">Enviar</button>
+						</div>
+					</form>
+				</div>
+				<div class="col-12 ps-3 pe-0 pt-3 pb-3 | col-md-6 | col-lg-6 p-lg-0 offset-lg-1">
+					<img class="w-100" src="resources/cotiza-01.jpg" alt="Imagen Contacto" title="Contacto">
+				</div>
+			</div>
+			<!-- Footer -->
+			<footer class="row text-center text-white">
+				<div class="col-12 p-0"><p>Entérate de las últimas novedades ¡síguenos!</p></div>
+				<div class="col-12 p-0">
+					<a class="hvr-float me-3" target="_blank" href="https://www.facebook.com/RotoplasMexico"><img style="height:40px;" src="resources/footer-facebook.svg" alt="Icono Facebook" title="Facebook"></a>
+					<a class="hvr-float me-3" target="_blank" href="https://twitter.com/rotoplasmexico"><img style="height:40px;" src="resources/footer-twitter.svg" alt="Icono Twitter" title="Twitter"></a>
+					<a class="hvr-float me-3" target="_blank" href="https://www.youtube.com/user/masymejoragua"><img style="height:40px;" src="resources/footer-youtube.svg" alt="Icono YouTube" title="YouTube"></a>
+					<a class="hvr-float me-0" target="_blank" href="https://www.linkedin.com/company/grupo-rotoplas/"><img style="height:40px;" src="resources/footer-linkedin.svg" alt="Icono LinkedIn" title="LinkedIn"></a>
+				</div>
+				<div class="col-12 p-0 mt-3"><p>Copyright &copy; 2022 Rotoplas S.A. de C.V. Todos los derechos reservados</p></div>
+			</footer>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="ventana-3d" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title blue5" id="exampleModalLabel">Tinaco Rotoplas Plus+</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body text-center" id="ventana-3d-canvas">
+						
+					</div>
+					<!-- <div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div> -->
+				</div>
+			</div>
+		</div>
+		<!-- js -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>

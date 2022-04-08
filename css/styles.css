@@ -1,0 +1,499 @@
+@import "fonts.css";
+@import "hover.css";
+@import "colors.css";
+
+/* ==============================================================
+/*	MENU
+/* ============================================================== */
+	#navegacion {
+		transition: all ease .3s;
+		padding: 0 .5rem;
+	}
+
+	.nav-link {
+		color: #002554 !important;
+	}
+
+	#toggleMobileMenu {
+		transition: all ease .5s;
+	}
+	
+	.navbar-light .navbar-toggler {
+		color: #002554;
+		border-color: #002554;
+	}
+
+	button:focus:not(:focus-visible) {
+		outline: 0;
+		color: #002554;
+	}
+
+	.scrolled-down {
+		transform: translateY(-100%);
+		transition: all 0.3s ease-in-out;
+	}
+	.scrolled-up {
+		transform: translateY(0);
+		transition: all 0.3s ease-in-out;
+	}
+
+	.logo-visible {
+		opacity: 1;
+		transition: all 0.3s ease-in-out;
+	}
+	.logo-oculto {
+		opacity: 0;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.scrolled-alternate {
+		background: #002554;
+		box-shadow: 0px 0px 12px 0px rgb(0 0 0 / 50%);
+	}
+
+	.scrolled-alternate .nav-link {
+		color: #fff !important;
+	}
+
+	/* Set the border color
+	.custom-toggler.navbar-toggler {
+		border-color: lightgreen;
+	} */
+	/* Setting the stroke to green using rgb values (0, 128, 0) */
+	.custom-toggler .navbar-toggler-icon {
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 156, 222, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+	}
+	button:focus:not(:focus-visible) {
+		outline: 0;
+		color: transparent;
+	}
+/* menu */
+
+
+.rtp-btn {
+    background: #002554;
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+	transition: all ease .4s;
+}
+.rtp-btn:hover {
+    background: #009cde;
+	color: #fff;
+}
+
+.rtp-btn-outline {
+	border: 2px solid #002554;
+    text-decoration: none;
+    color: #002554;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+	transition: all ease .4s;
+}
+.rtp-btn-outline:hover {
+    background: #009cde;
+	color: #fff;
+}
+
+
+/* ==============================================================
+/*	BANNER
+/* ============================================================== */
+	#banner-fondo-escritorio {
+		display: block;
+	}
+	#banner-fondo-movil {
+		display: none;
+	}
+
+	#banner h1 {
+		font-size: 60px;
+	}
+	#banner p {
+		margin: 0;
+	}
+	#banner-texto {
+		position: absolute;
+		top: 30%;
+		right: 25%;
+	}
+	#banner-logo {
+		position: absolute;
+		top: 10%;
+		right: 5%;
+		width: 200px;
+	}
+	#banner-nuevo {
+		position: absolute;
+		top: 2%;
+		left: 8%;
+		font-size: 40px;
+	}
+	#banner-frase {
+		position: absolute;
+		bottom: 8%;
+		right: 8%;
+		font-size: 30px;
+		line-height: 30px;
+	}
+	#banner-boton {
+		position: absolute;
+		bottom: 3%;
+		left: calc(50% - 25px);
+	}
+
+	@media only screen and (max-width: 1024px) {
+		#banner-logo {
+			top: 15%;
+			right: 2%;
+			width: 150px;
+		}
+		#banner-texto {
+			right: 20%;
+		}
+		#banner-nuevo {
+			top: 0%;
+			left: 6%;
+		}
+		#banner-frase {
+			bottom: 8%;
+			right: 5%;
+		}
+		#banner h1 {
+			font-size: 50px;
+		}
+	}
+	@media only screen and (max-width: 991px) {
+		#banner-logo {
+			top: 5%;
+			right: 76px;
+		}
+	}
+	@media only screen and (max-width: 768px) {
+		#banner-logo {
+			top: 5%;
+			right: 76px;
+		}
+		#banner h1 {
+			font-size: 40px;
+		}
+		#banner h2 {
+			font-size: 24px;
+		}
+		#banner-nuevo {
+			font-size: 30px;
+		}
+		#banner-frase {
+			font-size: 24px;
+		}
+	}
+	@media only screen and (max-width: 767px) {
+		#banner-logo {
+			top: 5%;
+			right: 2%;
+		}
+		#banner-nuevo {
+			top: 1%;
+			left: 66px;
+		}
+	}
+	@media only screen and (max-width: 670px) {
+		#banner h1 {
+			font-size: 35px;
+		}
+		#banner h2 {
+			font-size: 20px;
+		}
+		#banner-nuevo {
+			font-size: 24px;
+			top: 4%;
+		}
+		#banner-frase {
+			font-size: 20px;
+			line-height: 20px;
+		}
+		#banner-texto {
+			top: 27%;
+		}
+	}
+	@media only screen and (max-width: 576px) {
+		#banner-fondo-escritorio {
+			display: none;
+		}
+		#banner-fondo-movil {
+			display: block;
+		}
+		#banner-texto {
+			right: 0;
+			width: 100%;
+			padding: 1rem;
+			text-align: center;
+			top: 12%;
+		}
+		#banner h1 {
+			font-size: 36px;
+			line-height: 30px;
+		}
+		#banner h2 {
+			font-size: 32px;
+		}
+		#banner-logo {
+			top: 2%;
+			width: 200px;
+		}
+		#banner-nuevo {
+			top: 34%;
+			left: 3%;
+			font-size: 36px;
+		}
+		#banner-frase {
+			bottom: 10%;
+			right: 3%;
+			font-size: 24px;
+			line-height: normal;
+		}
+	}
+	@media only screen and (max-width: 425px) {
+		#banner h1 {
+			font-size: 40px;
+			line-height: 30px;
+		}
+		#banner-logo {
+			width: 150px;
+		}
+		#banner-nuevo {
+			top: 35%;
+			font-size: 24px;
+		}
+		#banner-frase {
+			font-size: 16px;
+		}
+	}
+	@media only screen and (max-width: 375px) {
+		#banner h2 {
+			font-size: 24px;
+		}
+	}
+	@media only screen and (max-width: 320px) {
+		#banner-nuevo {
+			top: 34%;
+			font-size: 22px
+		}
+	}
+/* inicio */
+
+
+/* ==============================================================
+/*	EVOLUCION
+/* ============================================================== */
+	#evolucion {
+		padding: 3rem 0;
+	}
+
+	#evolucion-boton {
+		position: absolute;
+		bottom: 5%;
+		left: 25%;
+	}
+/* evolucion */
+
+
+/* ==============================================================
+/*	ACCESORIOS
+/* ============================================================== */
+	#accesorios {
+		padding: 3rem 0;
+	}
+
+	#accesorios-imagenes-1 {
+		width: 350px;
+	}
+	#accesorios-imagenes-1 img {
+		width: 170px;
+	}
+
+	#accesorios-imagenes-2 {
+		margin-left: 2rem;
+	}
+	#accesorios-imagenes-2 img {
+		width: 72px;
+	}
+
+	#accesorios-nodos {
+		background: #ddd;
+	}
+	.accesorios-nodo {
+		display: inline-block;
+		padding: 1rem;
+	}
+	.accesorios-nodo > div {
+		width: 35px;
+		height: 35px;
+		display: inline-flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-right: 0.5rem;
+		background: #009cde;
+		color: #fff;
+		border-radius: 50%;
+	}
+
+	@media only screen and (max-width: 1024px) {
+		#accesorios-imagenes-1 {
+			width: 270px;
+		}
+		#accesorios-imagenes-1 img {
+			width: 120px;
+		}
+
+		#accesorios-imagenes-2 {
+			margin-left: 0rem;
+		}
+		#accesorios-imagenes-2 img {
+			width: 52px;
+		}
+	}
+/* accesorios */
+
+
+/* ==============================================================
+/*	BENEFICIOS
+/* ============================================================== */
+	#beneficios {
+		padding: 3rem 0;
+		background: url(../resources/beneficios-fondo-escritorio-01.svg) no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+
+	.beneficios-nodo {
+		color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0.5rem 0;
+	}
+	.beneficios-nodo-imagen {
+		width: 20%;
+		margin-right: 5%;
+		margin-left: 5%;
+	}
+	.beneficios-nodo-texto {
+		width: 50%;
+		line-height: normal;
+	}
+	.beneficios-nodo-texto p {
+		margin: 0;
+	}
+
+	.beneficios-nodo-principal {
+		margin: 2rem;
+	}
+	.beneficios-nodo-principal img {
+		width: 100%;
+		border-radius: 50%;
+		overflow: hidden;
+		padding: 1rem;
+		border: 3px solid #003796;
+	}
+
+	.slick-prev {
+		left: 0px;
+		z-index: 1;
+	}
+	.slick-next {
+		right: 0px;
+	}
+
+	@media only screen and (max-width: 1024px) {
+		.beneficios-nodo-imagen {
+			width: 20%;
+		}
+		.beneficios-nodo-texto {
+			width: 70%;
+		}
+	}
+	@media only screen and (max-width: 992px) {
+		.beneficios-nodo {
+			flex-wrap: wrap;
+			display: inline-flex !important;
+		}
+	}
+	@media only screen and (max-width: 991px) {
+		#beneficios {
+			padding: 0;
+			padding-bottom: 3rem;
+		}
+	}
+/* beneficios */
+
+
+/* ==============================================================
+/*	CAPACIDADES
+/* ============================================================== */
+	#capacidades {
+		padding: 3rem 0;
+		background: url(../resources/capacidades-fondo.jpg) no-repeat;
+		background-size: 100% 100%;
+		background-position: top center;
+	}
+
+	.capacidades-nodo-imagen {
+		height: 250px;
+	}
+	.capacidades-nodo-usuarios {
+		width: 25px;
+	}
+
+	@media only screen and (max-width: 576px) {
+		#capacidades {
+			background-size: 100% auto;
+		}
+
+		.capacidades-nodo {
+			padding-bottom: 1rem;
+		}
+	}
+/* capacidades */
+
+
+.instalacion-nodo {
+	width: 21%;
+	padding: 2rem;
+}
+.instalacion-nodo img {
+	width: 100%;
+	margin-bottom: 1rem;
+}
+.instalacion-nodo p {
+	margin: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+	.instalacion-nodo {
+		width: 25%;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.instalacion-nodo {
+		width: 33%;
+	}
+}
+@media only screen and (max-width: 576px) {
+	.instalacion-nodo {
+		width: 50%;
+		padding: .5rem;
+	}
+}
+
+/* ==============================================================
+/*	FOOTER
+/* ============================================================== */
+	footer {
+		background: #002554;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		font-size: .8rem;
+	}
+/* footer */
