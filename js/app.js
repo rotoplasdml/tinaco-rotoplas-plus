@@ -65,16 +65,25 @@ jQuery(document).ready(function($){
 
 	/* ==============================================================
 	/*	GOOGLE SHEETS
-	/* ==============================================================
-		const scriptURL = 'https://script.google.com/macros/s/AKfycbxmKAgHEHEih6TfHAuUN6Rl6oROKKdeqxDcPb-DZWskFaUv5ab58zbBeOxx3Y3L5AkV/exec'
-		const form = document.forms['form']
-
+	/* ============================================================== */
+		//https://script.google.com/macros/s/AKfycbxWc4_hlG8PV_MklSvFb7CpbGFJuyJXZoaxynp5tAz_ykFKdbLfEfGEBxMFlV8v9IKT/exec
+		const scriptURL = 'https://script.google.com/macros/s/AKfycbxWc4_hlG8PV_MklSvFb7CpbGFJuyJXZoaxynp5tAz_ykFKdbLfEfGEBxMFlV8v9IKT/exec'
+		const form = document.forms['form-tinaco-rotoplas-plus']
 		form.addEventListener('submit', e => {
 			e.preventDefault()
+			var today = new Date();
+			var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+			var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+			document.getElementById('fecha').value = date
+			document.getElementById('hora').value = time
 			fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 				.then(response => console.log('Success!', response))
+				.then(function(){
+					document.getElementById("form-tinaco-rotoplas-plus").reset()
+					document.getElementById('form-thank').classList.remove('d-none')
+				})
 				.catch(error => console.error('Error!', error.message))
-			e.currentTarget.submit()
+			//e.currentTarget.submit()
 		})
 	/* google sheets */
 

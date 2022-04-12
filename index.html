@@ -25,8 +25,19 @@
 		<script src="js/GLTFLoader.js"></script>
 		<script src="js/Detector.js"></script>
 		<script src="js/stats.min.js"></script>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-WSSQF85');</script>
+		<!-- End Google Tag Manager -->
 	</head>
 	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSSQF85"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
 		<!-- Navegacion -->
 		<nav id="navegacion" class="navbar navbar-expand-lg fixed-top">
 			<a id="navegacion-logo" href="/" class="navbar-brand logo-oculto d-none d-md-block">
@@ -337,22 +348,28 @@
 				<div class="col-12 p-3 | col-md-6 | col-lg-4 offset-lg-1">
 					<h2 class="light blue5">Adquiere el día de hoy tu<br><span class="bold">Tinaco Rotoplas Plus+</span></h2>
 					<p>Déjanos tus datos y en breve un ejecutivo de Rotoplas se comunicará contigo.</p>
-
-					<form class="row g-3">
+					<form name="form-tinaco-rotoplas-plus" id="form-tinaco-rotoplas-plus" action="" method="post" enctype="multipart/form-data" class="row g-3">
 						<div class="col-12">
-							<input type="text" class="form-control" name="nombre" placeholder="Nombre *">
+							<input type="text" class="form-control" name="nombre" placeholder="Nombre *" required>
 						</div>
 						<div class="col-12">
-							<input type="email" class="form-control" name="correo" placeholder="Correo electrónico">
+							<input type="email" class="form-control" name="correo" placeholder="Correo electrónico" required>
 						</div>
 						<div class="col-12">
-							<input type="text" class="form-control" name="telefono" placeholder="Teléfono *">
+							<input type="text" class="form-control" name="telefono" placeholder="Teléfono *" required>
 						</div>
 						<div class="col-12">
-							<input type="text" class="form-control" name="estado" placeholder="Estado *">
+							<input type="text" class="form-control" name="estado" placeholder="Estado *" required>
+						</div>
+						<div class="col-12 d-none">
+							<input type="text" id="fecha" name="fecha">
+							<input type="text" id="hora" name="hora">
 						</div>
 						<div class="col-12">
 							<button type="submit" class="btn btn-primary">Enviar</button>
+						</div>
+						<div id="form-thank" class="alert alert-success d-none" role="alert">
+							Gracias por contactarnos
 						</div>
 					</form>
 				</div>
