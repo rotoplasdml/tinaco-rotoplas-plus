@@ -27,21 +27,20 @@ jQuery(document).ready(function($){
 	/*	HIDE MENU
 	/* ============================================================== */
 		var menu = document.getElementById('navegacion')
-		var logo = document.getElementById('navegacion-logo')
+		//var logo = document.getElementById('navegacion-logo')
 		var logoMovil = document.getElementById('navegacion-logo-movil')
 		var prevScrollpos = window.pageYOffset
 		window.onscroll = function() {
 			if (window.pageYOffset > 0) {
 				menu.classList.add('scrolled-alternate')
-				logo.classList.remove('logo-oculto')
-				logoMovil.classList.remove('logo-oculto')
+				//logo.classList.remove('logo-oculto')
+				//logoMovil.classList.remove('logo-oculto')
 			} else {
 				menu.classList.remove('scrolled-alternate')
-				logo.classList.add('logo-oculto')
-				logoMovil.classList.add('logo-oculto')
+				//logo.classList.add('logo-oculto')
+				//logoMovil.classList.add('logo-oculto')
 			}
 			var currentScrollPos = window.pageYOffset;
-			var currentWidth = document.documentElement.clientWidth;
 			if (prevScrollpos > currentScrollPos) {
 				menu.classList.remove('scrolled-down')
 				menu.classList.add('scrolled-up')

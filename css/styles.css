@@ -5,13 +5,18 @@
 /* ==============================================================
 /*	MENU
 /* ============================================================== */
+	.container-fluid {
+		margin-top: 70px;
+	}
+
 	#navegacion {
+		background: #002554;
 		transition: all ease .3s;
 		padding: 0 .5rem;
 	}
 
 	.nav-link {
-		color: #002554 !important;
+		color: #fff !important;
 	}
 
 	#toggleMobileMenu {
@@ -29,12 +34,12 @@
 	}
 
 	.scrolled-down {
-		transform: translateY(-100%);
-		transition: all 0.3s ease-in-out;
+		/* transform: translateY(-100%);
+		transition: all 0.3s ease-in-out; */
 	}
 	.scrolled-up {
-		transform: translateY(0);
-		transition: all 0.3s ease-in-out;
+		/* transform: translateY(0);
+		transition: all 0.3s ease-in-out; */
 	}
 
 	.logo-visible {
@@ -320,7 +325,8 @@
 /*	ACCESORIOS
 /* ============================================================== */
 	#accesorios {
-		padding: 3rem 0;
+		/* padding: 3rem 0; */
+		padding-top: calc(3rem + 70px);
 	}
 
 	#accesorios-imagenes-1 {
@@ -378,7 +384,8 @@
 /*	BENEFICIOS
 /* ============================================================== */
 	#beneficios {
-		padding: 3rem 0;
+		/* padding: 3rem 0; */
+		padding-top: calc(3rem + 70px);
 		background: url(../resources/beneficios-fondo-escritorio-01.svg) no-repeat;
 		background-size: cover;
 		background-position: center center;
@@ -450,7 +457,8 @@
 /*	CAPACIDADES
 /* ============================================================== */
 	#capacidades {
-		padding: 3rem 0;
+		/* padding: 3rem 0; */
+		padding-top: calc(3rem + 70px);
 		background: url(../resources/capacidades-fondo.jpg) no-repeat;
 		background-size: 100% 100%;
 		background-position: top center;
@@ -474,6 +482,9 @@
 	}
 /* capacidades */
 
+#instalacion {
+	padding-top: calc(3rem + 70px);
+}
 
 .instalacion-nodo {
 	width: 21%;
@@ -502,6 +513,10 @@
 		width: 50%;
 		padding: .5rem;
 	}
+}
+
+#cotiza {
+	padding-top: calc(3rem + 70px);
 }
 
 /* ==============================================================
