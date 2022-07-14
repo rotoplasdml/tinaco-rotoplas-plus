@@ -32,21 +32,21 @@ jQuery(document).ready(function($){
 		var prevScrollpos = window.pageYOffset
 		window.onscroll = function() {
 			if (window.pageYOffset > 0) {
-				menu.classList.add('scrolled-alternate')
+				//menu.classList.add('scrolled-alternate')
 				//logo.classList.remove('logo-oculto')
 				//logoMovil.classList.remove('logo-oculto')
 			} else {
-				menu.classList.remove('scrolled-alternate')
+				//menu.classList.remove('scrolled-alternate')
 				//logo.classList.add('logo-oculto')
 				//logoMovil.classList.add('logo-oculto')
 			}
 			var currentScrollPos = window.pageYOffset;
 			if (prevScrollpos > currentScrollPos) {
-				menu.classList.remove('scrolled-down')
-				menu.classList.add('scrolled-up')
+				//menu.classList.remove('scrolled-down')
+				//menu.classList.add('scrolled-up')
 			} else {
-				menu.classList.remove('scrolled-up')
-				menu.classList.add('scrolled-down')
+				//menu.classList.remove('scrolled-up')
+				//menu.classList.add('scrolled-down')
 			}
 			prevScrollpos = currentScrollPos
 		}
