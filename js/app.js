@@ -186,16 +186,16 @@ jQuery(document).ready(function($){
 				scene = new THREE.Scene()
 
 				// Camera
-				camera = new THREE.PerspectiveCamera( 75, 450 / 450, .1, 2000 ) // window.innerWidth / window.innerHeight
-				camera.position.z = 3
-				camera.position.y = 0
-				camera.position.x = 0
+				camera = new THREE.PerspectiveCamera( 10, 450 / 450, .1, 2000 ) // window.innerWidth / window.innerHeight 75
+				camera.position.z = 1500 //0
+				camera.position.y = 400 // 100
+				camera.position.x = 1000 // 0
 				camera.aspect = size / size
 
 				// Controls
 				controls = new THREE.OrbitControls( camera )
-				controls.dampingFactor = 2.5; // friction
-				controls.rotateSpeed = 2.5; // mouse sensitivity
+				controls.dampingFactor = 2.5 // friction
+				controls.rotateSpeed = 2.5 // mouse sensitivity
 				controls.update()
 
 				// Loader
@@ -204,8 +204,9 @@ jQuery(document).ready(function($){
 					model = gltf.scene
 					scene.add( model )
 					model.position.z = 0
-					model.position.y = -1.3
+					model.position.y = -75 // 0
 					model.position.x = 0
+					model.rotation = 
 					animate()
 				})
 
